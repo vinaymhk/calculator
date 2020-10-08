@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: whitesmoke;
+  --fg: green;
+  --fg-hover: #2f4f2f;
+  --danger: #dc143c;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+}
+.app {
+  background-color: white;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 35px -20px black;
+  height: 50%;
+  width: 80%;
+}
+.expresstion {
+  display: flex;
+}
+.operator {
+  display: block;
+  margin-right: 0.8rem;
+  margin-left: 0.8rem;
+  line-height: 2rem;
+}
+
+input[type="number"] {
+  border: none;
+  background-color: var(--bg);
+  padding: 0.4em;
+  font-size: 1.2rem;
+  border-radius: 0.2em;
+  width: 100%;
+}
+.operations-count {
+  margin-bottom: 2rem;
+}
+
+.operations {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.operation {
+  background-color: var(--fg);
+  padding: 0.4em;
+  font-size: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 0.1em;
+  box-shadow: 1px 1px 20px -5px var(--fg);
+  transition: background-color 0.3s ease;
+}
+
+[type="button"],
+[role="button"] {
+  cursor: pointer;
+}
+operation:hover {
+  background-color: var(--fg-hover);
+}
+.result-container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+.reset {
+  background-color: var(--danger);
+  padding: 0.4em;
+  font-size: 1.2rem;
+  display: inline-block;
+  color: #fff;
+  border-radius: 0.1em;
+  box-shadow: 1px 1px 20px -5px red;
+  transition: background-color 0.3s ease;
+}
+.reset:hover {
+  background-color: red;
+}
+
+.result {
+  margin-left: 1em;
+}
